@@ -1,0 +1,156 @@
+[
+    {
+        "name": "Asisten Produser Televisi",
+        "faculty": "Ilmu Komunikasi",
+        "program": "Broadcasting",
+        "downloadAlert": "https://drive.google.com/drive/folders/10AUeGyjx2lAJQF2d0lSQXkPU7kJf9Rjk",
+        "id": 14
+    },
+    {
+        "name": "Desainer Konten Visual Junior",
+        "faculty": "Ilmu Komunikasi",
+        "program": "Digital Communication",
+        "downloadAlert": "https://drive.google.com/drive/folders/1E1xgHsiiXg2Qt0mMkkS-KdG09xU6Eo-N",
+        "id": 15
+    },
+    {
+        "name": "Memproduksi Materi Audio Visual Multimedia",
+        "faculty": "Ilmu Komunikasi",
+        "program": "Digital Communication",
+        "downloadAlert": "https://drive.google.com/drive/folders/1TbZJIeEZaLtjfTB-iDodL9VHmS1NyIVM",
+        "id": 16
+    },
+    {
+        "name": "Pembuatan Iklan",
+        "faculty": "Ilmu Komunikasi",
+        "program": "Marketing Communication",
+        "downloadAlert": "https://drive.google.com/drive/folders/1o8C6eAVla27siFf-swmDmunKYlXG8m0M",
+        "id": 17
+    },
+    {
+        "name": "Pengelolaan Hubungan Konsumen",
+        "faculty": "Ilmu Komunikasi",
+        "program": "Marketing Communication",
+        "downloadAlert": "https://drive.google.com/drive/folders/1FT4zcKuy1nDxMMPxJ1vnNSfrkrA9eZCy",
+        "id": 18
+    },
+    {
+        "name": "Pengelolaan Strategi Kampanye Periklanan",
+        "faculty": "Ilmu Komunikasi",
+        "program": "Marketing Communication",
+        "downloadAlert": "https://drive.google.com/drive/folders/1AV3nU3rkaBcrf2cZAeIVfS4XIkehemjV",
+        "id": 19
+    },
+    {
+        "name": "Manajemen Isu",
+        "faculty": "Ilmu Komunikasi",
+        "program": "Public Relations",
+        "downloadAlert": "https://drive.google.com/drive/folders/12T8fQg-F4GRUzOIfJq32S3SODeo0MP9m",
+        "id": 20
+    },
+    {
+        "name": "Melaksanakan Komunikasi dengan Pemangku Kepentingan",
+        "faculty": "Ilmu Komunikasi",
+        "program": "Public Relations",
+        "downloadAlert": "https://drive.google.com/drive/folders/1RRDrdBvjAXZAYpSa4GdwuENoaDbLyxhZ",
+        "id": 21
+    },
+    {
+        "name": "Melaksanakan RIset Kehumasan",
+        "faculty": "Ilmu Komunikasi",
+        "program": "Public Relations",
+        "downloadAlert": "https://drive.google.com/drive/folders/1qAyZNVIAv9KRBGuty84wPtR80cC2CWRy",
+        "id": 22
+    },
+    {
+        "name": "Memproduksi Konten Kehumasan",
+        "faculty": "Ilmu Komunikasi",
+        "program": "Public Relations",
+        "downloadAlert": "https://drive.google.com/drive/folders/1f8lC4TXx306KSyZ0dI-MfdrSBqLeIXbQ",
+        "id": 23
+    },
+    {
+        "name": "Teknisi Akuntansi Madya",
+        "faculty": "Ekonomi dan Bisnis",
+        "program": "Akuntansi D3",
+        "downloadAlert": "https://drive.google.com/drive/folders/1RpjHlWgFws6-pwD7KJM_I9Qaa5lsj-jF",
+        "id": 24
+    },
+    {
+        "name": "Teknisi Akuntansi Ahli",
+        "faculty": "Ekonomi dan Bisnis",
+        "program": "Akuntansi S1",
+        "downloadAlert": "https://drive.google.com/drive/folders/1FbU3TEXTtCCqC7by70PP-XttYp1V8C0N",
+        "id": 25
+    },
+    {
+        "name": "Supervisor Rekrutmen dan Seleksi Sumber Daya Manusia",
+        "faculty": "Ekonomi dan Bisnis",
+        "program": "Manajemen S1",
+        "downloadAlert": "https://drive.google.com/drive/folders/1i-MMFiAxND0yvpywho67jYSHhkzPhRmE",
+        "id": 26
+    },
+    {
+        "name": "Kepala Keuangan Mikro Bukan BANK",
+        "faculty": "Ekonomi dan Bisnis",
+        "program": "Manajemen S1",
+        "downloadAlert": "https://drive.google.com/drive/folders/1X6lHj2fojebQlFX4ZnOTbi0xz4qDWW-s",
+        "id": 27
+    },
+    {
+        "name": "Memberikan Layanan Konsultasi Manajemen Pemasaran",
+        "faculty": "Ekonomi dan Bisnis",
+        "program": "Manajemen S1",
+        "downloadAlert": "https://drive.google.com/drive/folders/1obltsDdOazwGqOPkwn-r4Hc5GfDO11IC",
+        "id": 28
+    },
+    {
+        "name": "Exhibition Planner",
+        "faculty": "Ekonomi dan Bisnis",
+        "program": "Manajemen D3",
+        "downloadAlert": "https://drive.google.com/drive/folders/1PpIRS2foBzHyfKIXq2a2Ayg_Jpkast1n",
+        "id": 29
+    },
+    {
+        "name": "MICE",
+        "faculty": "Ekonomi dan Bisnis",
+        "program": "Manajemen D3",
+        "downloadAlert": "https://drive.google.com/drive/folders/10dvP5-C0iRT_qy5V81qG9cTgIsn2xR0t",
+        "id": 30
+    },
+    {
+        "name": "Kualifikasi VI Bidang Konsultan Kemasan Produk Industri Kecil dan Menengah",
+        "faculty": "Desain dan Seni Kreatif",
+        "program": "Desain Produk",
+        "downloadAlert": "https://drive.google.com/drive/folders/1A8_W3K1LGz8XcdqIMxGoCFTKm_PZrrmS",
+        "id": 31
+    },
+    {
+        "name": "Desain Grafis Junior",
+        "faculty": "Desain dan Seni Kreatif",
+        "program": "Desain Komunikasi Visual",
+        "downloadAlert": "https://drive.google.com/drive/folders/1mm7orzv-2GuUmDAVEN5mW4RJ7kRdES1b",
+        "id": 32
+    },
+    {
+        "name": "Pengelolaan Proyek Desain",
+        "faculty": "Desain dan Seni Kreatif",
+        "program": "Desain Komunikasi Visual",
+        "downloadAlert": "https://drive.google.com/drive/folders/1jx1ndnLqduZbrRLeWWiMhjEmRgB4yqqr",
+        "id": 33
+    },
+    {
+        "name": "Motion Designer",
+        "faculty": "Desain dan Seni Kreatif",
+        "program": "Desain Komunikasi Visual",
+        "downloadAlert": "https://drive.google.com/drive/folders/1uaf0X1SAElupqOD5mpR_R1k6VX5DQ8za",
+        "id": 34
+    },
+    {
+        "name": "Memproduksi Materi Audio Visual Multimedia",
+        "faculty": "Desain dan Seni Kreatif",
+        "program": "Desain Komunikasi Visual",
+        "downloadAlert": "https://drive.google.com/drive/folders/1E9keyzEbck7Xn0j95d2LQtiUTWy3RJF4",
+        "id": 35
+    }
+]

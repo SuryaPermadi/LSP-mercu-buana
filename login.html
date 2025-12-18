@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - LSP Universitas Mercu Buana</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-container {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .login-card {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid var(--gray);
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .login-header .logo-icon {
+            margin: 0 auto 1.5rem;
+            width: 70px;
+            height: 70px;
+            font-size: 2rem;
+        }
+
+        .login-header h2 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.875rem 1.25rem;
+            border: 2px solid var(--gray);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 4px rgba(0, 59, 115, 0.1);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+
+        .error-message {
+            background: #FEE2E2;
+            color: #B91C1C;
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            display: none;
+            border: 1px solid #FECACA;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">LSP</div>
+                <span>LSP UMB</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-icon">LSP</div>
+                <h2>Login Admin</h2>
+                <p>Silakan masuk untuk mengelola data</p>
+            </div>
+
+            <div id="error-box" class="error-message"></div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control" placeholder="Masukkan username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-login">Masuk Dashboard</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="index.html" style="font-size: 0.9rem; color: var(--text-light);">← Kembali ke Beranda</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script>
+        // If already logged in, go to admin
+        if (isLoggedIn()) {
+            window.location.href = 'admin.html';
+        }
+
+        const form = document.getElementById('login-form');
+        const errorBox = document.getElementById('error-box');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            errorBox.style.display = 'none';
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                await loginAdmin(username, password);
+                window.location.href = 'admin.html';
+            } catch (err) {
+                errorBox.innerText = err.message;
+                errorBox.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (!localStorage.getItem('lsp_admin_token')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+    <title>Admin Dashboard - LSP Universitas Mercu Buana</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-form-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 2rem;
+            border: 1px solid var(--gray);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--gray);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-light);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .badge-edit {
+            background: var(--info);
+            color: white;
+        }
+
+        .badge-new {
+            background: var(--success);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">LSP</div>
+                <span>LSP UMB</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="admin.html" class="nav-link active">Admin Dashboard</a></li>
+                <li><a href="#" onclick="logoutAdmin(); return false;" class="nav-link"
+                        style="color: #ff4d4d;">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Admin Dashboard</h1>
+            <p>Kelola data skema sertifikasi pada tabel APL 02 dengan mudah</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Input Form -->
+        <section class="section">
+            <h2 class="section-title" id="form-title">Tambah Skema Baru</h2>
+            <div class="admin-form-card">
+                <form id="scheme-form">
+                    <input type="hidden" id="scheme-id">
+                    <div class="card-grid"
+                        style="margin-top: 0; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                        <div class="form-group">
+                            <label for="name">Nama Skema Sertifikasi</label>
+                            <input type="text" id="name" class="form-control" placeholder="Contoh: Junior Programmer"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="faculty">Fakultas</label>
+                            <input type="text" id="faculty" class="form-control" placeholder="Contoh: Ilmu Komunikasi"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="program">Program Studi (Prodi)</label>
+                            <input type="text" id="program" class="form-control" placeholder="Contoh: Informatika"
+                                required>
+                            <div class="form-group">
+                                <label for="downloadAlert">Link Folder APL (Google Drive)</label>
+                                <input type="text" id="downloadAlert" class="form-control"
+                                    placeholder="https://drive.google.com/..." required>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-primary" id="submit-btn">✨ Simpan Skema</button>
+                            <button type="button" class="btn btn-secondary" id="cancel-btn" style="display: none;">Batal
+                                Edit</button>
+                        </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Data Table -->
+        <section class="section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <h2 class="section-title" style="margin-bottom: 0;">Daftar Skema Sertifikasi</h2>
+                <button id="bulk-delete-btn" class="btn btn-danger" style="display: none; background-color: #ff4d4d;"
+                    onclick="handleBulkDelete()">
+                    🗑️ Hapus yang Dipilih (<span id="selected-count">0</span>)
+                </button>
+            </div>
+            <div class="table-container">
+                <table id="admin-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 40px;"><input type="checkbox" id="select-all"
+                                    onclick="toggleSelectAll(this)"></th>
+                            <th>No</th>
+                            <th>Skema Sertifikasi</th>
+                            <th>Fakultas</th>
+                            <th>Prodi</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-table-body">
+                        <!-- Data will be rendered here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LSP Universitas Mercu Buana. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script>
+        const form = document.getElementById('scheme-form');
+        const formTitle = document.getElementById('form-title');
+        const submitBtn = document.getElementById('submit-btn');
+        const cancelBtn = document.getElementById('cancel-btn');
+        const idInput = document.getElementById('scheme-id');
+
+        function init() {
+            renderTable('admin-table-body', true);
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const scheme = {
+                name: document.getElementById('name').value,
+                faculty: document.getElementById('faculty').value,
+                program: document.getElementById('program').value,
+                downloadAlert: document.getElementById('downloadAlert').value
+            };
+
+            try {
+                const id = parseInt(idInput.value);
+                if (id) {
+                    await updateScheme(id, scheme);
+                    alert('Data berhasil diperbarui!');
+                } else {
+                    await addScheme(scheme);
+                    alert('Data berhasil ditambahkan!');
+                }
+
+                resetForm();
+                renderTable('admin-table-body', true);
+            } catch (err) {
+                alert('Gagal menyimpan data: ' + err.message);
+                if (err.message.includes('auth') || err.message.includes('login')) {
+                    window.location.href = 'login.html';
+                }
+            }
+        });
+
+        async function editItem(id) {
+            const schemes = await getSchemes();
+            const scheme = schemes.find(s => s.id === id);
+            if (scheme) {
+                idInput.value = scheme.id;
+                document.getElementById('name').value = scheme.name;
+                document.getElementById('faculty').value = scheme.faculty;
+                document.getElementById('program').value = scheme.program;
+                document.getElementById('program').value = scheme.program;
+
+                formTitle.innerText = 'Edit Skema Sertifikasi';
+                submitBtn.innerText = '💾 Perbarui Data';
+                cancelBtn.style.display = 'inline-flex';
+                window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+
+        async function deleteItem(id) {
+            if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+                try {
+                    await deleteScheme(id);
+                    renderTable('admin-table-body', true);
+                    toggleBulkActionBtn();
+                } catch (err) {
+                    alert('Gagal menghapus data: ' + err.message);
+                }
+            }
+        }
+
+        function toggleSelectAll(checkbox) {
+            const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+            rowCheckboxes.forEach(cb => cb.checked = checkbox.checked);
+            toggleBulkActionBtn();
+        }
+
+        function toggleBulkActionBtn() {
+            const selected = document.querySelectorAll('.row-checkbox:checked');
+            const bulkBtn = document.getElementById('bulk-delete-btn');
+            const countSpan = document.getElementById('selected-count');
+            const selectAllCb = document.getElementById('select-all');
+
+            if (selected.length > 0) {
+                bulkBtn.style.display = 'inline-flex';
+                countSpan.innerText = selected.length;
+            } else {
+                bulkBtn.style.display = 'none';
+            }
+
+            // Sync select all checkbox
+            const total = document.querySelectorAll('.row-checkbox').length;
+            selectAllCb.checked = selected.length === total && total > 0;
+            selectAllCb.indeterminate = selected.length > 0 && selected.length < total;
+        }
+
+        async function handleBulkDelete() {
+            const selected = Array.from(document.querySelectorAll('.row-checkbox:checked')).map(cb => parseInt(cb.value));
+            if (selected.length === 0) return;
+
+            if (confirm(`Apakah Anda yakin ingin menghapus ${selected.length} skema yang dipilih?`)) {
+                try {
+                    await bulkDeleteSchemes(selected);
+                    alert('Data berhasil dihapus!');
+                    renderTable('admin-table-body', true);
+                    toggleBulkActionBtn();
+                } catch (err) {
+                    alert('Gagal menghapus data: ' + err.message);
+                }
+            }
+        }
+
+        cancelBtn.addEventListener('click', resetForm);
+
+        function resetForm() {
+            form.reset();
+            idInput.value = '';
+            formTitle.innerText = 'Tambah Skema Baru';
+            submitBtn.innerText = '✨ Simpan Skema';
+            cancelBtn.style.display = 'none';
+        }
+
+        window.onload = init;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download Formulir APL 01 dan APL 02 - LSP Universitas Mercu Buana">
+    <title>APL 01 & APL 02 - LSP Universitas Mercu Buana</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">LSP</div>
+                <span>LSP UMB</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="profil.html" class="nav-link">Profil LSP</a></li>
+                <li><a href="sertifikat.html" class="nav-link">Sertifikat UJIKOM</a></li>
+                <li><a href="apl.html" class="nav-link">APL 01 & APL 02</a></li>
+                <li><a href="pembayaran.html" class="nav-link">Pembayaran</a></li>
+            </ul>
+
+            <button class="mobile-menu-btn">
+                <span>☰</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Formulir APL 01 & APL 02</h1>
+            <p>Panduan lengkap dan download formulir Asesmen Mandiri untuk sertifikasi kompetensi</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Pengenalan APL -->
+        <section class="section">
+            <h2 class="section-title">Apa itu Formulir APL?</h2>
+            <div class="info-box info">
+                <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-dark);">
+                    APL (Asesmen Pra-Lembaga) adalah formulir asesmen mandiri yang harus diisi oleh calon peserta
+                    sertifikasi sebelum mengikuti Uji Kompetensi. Formulir ini digunakan untuk menilai kesiapan
+                    dan kelayakan peserta dalam mengikuti proses asesmen kompetensi.
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <h3>APL 01</h3>
+                    <h4>Formulir Permohonan Sertifikasi Kompetensi</h4>
+                    <p>
+                        Berisi data pribadi, riwayat pendidikan, riwayat pekerjaan, dan bukti-bukti
+                        kelengkapan persyaratan administrasi untuk mengikuti sertifikasi.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">✅</div>
+                    <h3>APL 02</h3>
+                    <h4>Formulir Asesmen Mandiri</h4>
+                    <p>
+                        Berisi daftar unit kompetensi yang akan diujikan. Peserta melakukan penilaian
+                        mandiri terhadap kompetensi yang dimiliki berdasarkan kriteria unjuk kerja.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Formulir -->
+        <section class="section">
+            <h2 class="section-title">Download Formulir</h2>
+            <p class="section-subtitle">
+                Pilih skema sertifikasi yang sesuai dan download formulir APL 01 & APL 02
+            </p>
+
+            <div class="info-box warning" style="margin-bottom: 2rem;">
+                <h4>⚠️ Penting Sebelum Download</h4>
+                <ul class="checklist">
+                    <li>Pastikan Anda memilih formulir sesuai skema sertifikasi yang dipilih</li>
+                    <li>Baca panduan pengisian dengan teliti sebelum mengisi formulir</li>
+                    <li>Siapkan dokumen pendukung yang diperlukan</li>
+                    <li>Formulir harus diisi dengan lengkap dan jujur</li>
+                </ul>
+            </div>
+
+            <!-- Daftar Skema per Fakultas -->
+            <div id="apl-content">
+                <!-- Data will be loaded dynamically grouped by Faculty -->
+            </div>
+        </section>
+
+        <!-- Panduan Pengisian APL 01 -->
+        <section class="section">
+            <h2 class="section-title">Panduan Pengisian APL 01</h2>
+
+            <div class="info-box success">
+                <h4>📝 Langkah-langkah Pengisian APL 01</h4>
+                <ol class="numbered-list">
+                    <li>
+                        <div>
+                            <strong>Bagian 1: Data Pribadi</strong><br>
+                            Isi data pribadi dengan lengkap dan sesuai KTP. Pastikan nama, NIK, tempat/tanggal lahir,
+                            alamat, nomor telepon, dan email aktif tercantum dengan benar.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Bagian 2: Data Pekerjaan</strong><br>
+                            Jika belum mempunyai pekerjaan, peserta bisa isi data pekerjaan dengan data Universitas.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Bagian 3: Riwayat Pendidikan</strong><br>
+                            Cantumkan pendidikan formal terakhir dan pendidikan/pelatihan tambahan yang relevan
+                            dengan kompetensi yang akan diujikan.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Bagian 4: Bukti Kelengkapan</strong><br>
+                            Lampirkan dokumen pendukung seperti fotokopi KTP, ijazah, sertifikat pelatihan,
+                            portofolio pekerjaan, dan dokumen lain yang relevan.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Bagian 5: Pernyataan</strong><br>
+                            Baca dan pahami pernyataan yang ada, kemudian beri tanda tangan dan tanggal pengisian.
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="card-grid" style="margin-top: 2rem;">
+                <div class="card">
+                    <h4>📎 Dokumen Pendukung APL 01</h4>
+                    <ul class="checklist">
+                        <li>Fotokopi KTP yang masih berlaku</li>
+                        <li>Fotokopi ijazah pendidikan terakhir</li>
+                        <li>Pas foto berwarna ukuran 3x4 (2 lembar)</li>
+                        <li>CV/Daftar Riwayat Hidup</li>
+                        <li>Sertifikat pelatihan (jika ada)</li>
+                        <li>Portofolio pekerjaan (jika ada)</li>
+                        <li>Surat keterangan kerja (jika bekerja)</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4>⚠️ Hal yang Harus Diperhatikan</h4>
+                    <ul class="checklist">
+                        <li>Pastikan semua data terisi dengan lengkap</li>
+                        <li>Gunakan tinta hitam untuk pengisian manual</li>
+                        <li>Tulisan harus jelas dan terbaca</li>
+                        <li>Tidak ada coretan atau tipp-ex</li>
+                        <li>Tanda tangan harus asli (bukan scan)</li>
+                        <li>Lampirkan semua dokumen yang diminta</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panduan Pengisian APL 02 -->
+        <section class="section">
+            <h2 class="section-title">Panduan Pengisian APL 02</h2>
+
+            <div class="info-box info">
+                <h4>✅ Cara Mengisi APL 02 (Asesmen Mandiri)</h4>
+                <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    APL 02 berisi checklist kompetensi yang harus Anda nilai sendiri. Untuk setiap kriteria unjuk kerja
+                    yang tercantum, beri tanda centang (✓) pada kolom yang sesuai:
+                </p>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kolom</th>
+                                <th>Penjelasan</th>
+                                <th>Kapan Pilih</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>K (Kompeten)</strong></td>
+                                <td>Anda mampu melakukan tugas ini</td>
+                                <td>Jika Anda menguasai dan bisa melakukan kriteria tersebut</td>
+                            </tr>
+                            <tr>
+                                <td><strong>BK (Belum Kompeten)</strong></td>
+                                <td>Anda belum mampu melakukan tugas ini</td>
+                                <td>Jika Anda belum menguasai atau belum bisa melakukan kriteria tersebut</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="info-box warning" style="margin-top: 2rem;">
+                <h4>💡 Tips Pengisian APL 02</h4>
+                <ol class="numbered-list">
+                    <li>
+                        <div>
+                            <strong>Baca Setiap Kriteria dengan Teliti</strong><br>
+                            Pahami benar apa yang dimaksud dengan setiap kriteria unjuk kerja sebelum menilai diri
+                            sendiri.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Jujur dalam Penilaian</strong><br>
+                            Nilai diri Anda dengan jujur. Penilaian ini akan membantu asesor menentukan metode asesmen
+                            yang tepat.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Siapkan Bukti</strong><br>
+                            Untuk setiap kompetensi yang Anda klaim, siapkan bukti pendukung seperti portofolio,
+                            sertifikat, atau contoh hasil kerja.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Konsultasi dengan Asesor</strong><br>
+                            Jika ragu, Anda dapat berkonsultasi dengan asesor atau pihak LSP sebelum mengisi formulir.
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Pengumpulan Formulir -->
+        <section class="section">
+            <h2 class="section-title">Pengumpulan Formulir APL</h2>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">📧</div>
+                    <h3>Upload Online</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Scan formulir yang sudah diisi lengkap beserta lampiran, kemudian kirim via email ke:
+                    </p>
+                    <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 1rem;">
+                        lsp@mercubuana.ac.id
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">
+                        Format file: PDF<br>
+                        Ukuran maksimal: 10 MB<br>
+                        Subject: APL - [Nama Lengkap] - [Skema]
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Serahkan Langsung</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Datang langsung ke Sekretariat LSP UMB dengan membawa formulir asli dan lampiran:
+                    </p>
+                    <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 1rem;">
+                        Sekretariat LSP UMB<br>
+                        Gedung [Nama], Lantai [X]
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">
+                        Senin - Jumat: 08:00 - 15:00 WIB<br>
+                        Sabtu: 08:00 - 12:00 WIB
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📮</div>
+                    <h3>Kirim via Pos</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Kirim formulir asli beserta lampiran via pos ke alamat:
+                    </p>
+                    <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 1rem;">
+                        LSP Universitas Mercu Buana<br>
+                        Jl. Meruya Selatan<br>
+                        Kembangan, Jakarta Barat 11650
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">
+                        Pastikan menggunakan amplop yang aman dan cantumkan nomor resi
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-box warning" style="margin-top: 2rem;">
+                <h4>⏰ Batas Waktu Pengumpulan</h4>
+                <p style="font-size: 1.05rem;">
+                    Formulir APL 01 dan APL 02 harus dikumpulkan paling lambat <strong>7 hari sebelum jadwal
+                        asesmen</strong>.
+                    Formulir yang terlambat dikumpulkan tidak akan diproses dan peserta harus mendaftar ulang untuk
+                    periode berikutnya.
+                </p>
+            </div>
+        </section>
+
+        <!-- Verifikasi -->
+        <section class="section">
+            <h2 class="section-title">Verifikasi & Tindak Lanjut</h2>
+
+            <div class="info-box success">
+                <h4>✓ Proses Setelah Pengumpulan</h4>
+                <ol class="numbered-list">
+                    <li>
+                        <div>
+                            <strong>Verifikasi Dokumen</strong><br>
+                            Tim LSP akan memverifikasi kelengkapan dan keabsahan dokumen Anda dalam 3-5 hari kerja.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Konfirmasi Penerimaan</strong><br>
+                            Anda akan menerima konfirmasi via email/WA jika formulir diterima dan lengkap.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Revisi (Jika Diperlukan)</strong><br>
+                            Jika ada kekurangan, Anda akan diminta melengkapi dalam waktu yang ditentukan.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Penetapan Jadwal</strong><br>
+                            Setelah semua dokumen lengkap dan pembayaran diterima, Anda akan mendapat jadwal asesmen.
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- FAQ APL -->
+        <section class="section">
+            <h2 class="section-title">Pertanyaan Umum (FAQ)</h2>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h4>❓ Apakah formulir harus ditulis tangan?</h4>
+                    <p>Tidak, Anda bisa mengisi secara digital kemudian print, atau print dulu baru diisi manual dengan
+                        tulisan yang jelas.</p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ Bagaimana jika saya belum punya pengalaman kerja?</h4>
+                    <p>Anda tetap bisa mendaftar selama memiliki kompetensi yang dibutuhkan. Lampirkan bukti lain
+                        seperti portofolio atau sertifikat pelatihan.</p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ Berapa lama proses verifikasi formulir?</h4>
+                    <p>Proses verifikasi memakan waktu 3-5 hari kerja setelah formulir diterima.</p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ Apakah bisa mengubah formulir setelah dikumpulkan?</h4>
+                    <p>Bisa, selama belum memasuki tahap asesmen. Hubungi sekretariat LSP untuk revisi.</p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ Apa yang terjadi jika formulir tidak lengkap?</h4>
+                    <p>Formulir akan dikembalikan untuk dilengkapi. Anda harus melengkapi sesuai batas waktu yang
+                        ditentukan.</p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ Apakah ada contoh pengisian formulir?</h4>
+                    <p>Ya, Anda bisa meminta contoh pengisian ke sekretariat LSP atau download panduan lengkap di
+                        website.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section">
+            <div class="info-box info" style="text-align: center; padding: 2rem;">
+                <h2 style="color: var(--info); margin-bottom: 1rem;">Butuh Bantuan Pengisian?</h2>
+                <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">
+                    Tim kami siap membantu Anda dalam proses pengisian formulir APL
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:lsp@mercubuana.ac.id" class="btn btn-primary">
+                        ✉️ Konsultasi via Email
+                    </a>
+                    <a href="tel:+622158840816" class="btn btn-secondary">
+                        📞 Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>LSP Universitas Mercu Buana</h4>
+                <p>Lembaga Sertifikasi Profesi yang berkomitmen memberikan sertifikasi kompetensi berkualitas dan
+                    terpercaya.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Menu Cepat</h4>
+                <a href="index.html">Beranda</a>
+                <a href="profil.html">Profil LSP</a>
+                <a href="sertifikat.html">Sertifikat UJIKOM</a>
+                <a href="apl.html">APL 01 & APL 02</a>
+                <a href="pembayaran.html">Pembayaran</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <p>📍 Jl. Meruya Selatan, Kembangan, Jakarta Barat</p>
+                <p>📞 (021) 5840816</p>
+                <p>✉️ lsp@mercubuana.ac.id</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Jam Operasional</h4>
+                <p>Senin - Jumat: 08:00 - 16:00 WIB</p>
+                <p>Sabtu: 08:00 - 12:00 WIB</p>
+                <p>Minggu & Libur: Tutup</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 LSP Universitas Mercu Buana. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="data.js"></script>
+    <script>
+        window.onload = function () {
+            renderPublicSchemes('apl-content');
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
