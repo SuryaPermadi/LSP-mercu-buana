@@ -24,6 +24,18 @@
             "dest": "/api/index.js"
         },
         {
+            "src": "/login",
+            "dest": "/login.html"
+        },
+        {
+            "src": "/admin",
+            "dest": "/admin.html"
+        },
+        {
+            "src": "/apl",
+            "dest": "/apl.html"
+        },
+        {
             "src": "/(.*)",
             "dest": "/$1"
         }
