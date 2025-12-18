@@ -15,6 +15,9 @@ const DB_FILE = path.join(process.cwd(), 'database.json');
 app.use(cors());
 app.use(bodyParser.json());
 
+// Serve static files from the root directory
+app.use(express.static(path.join(__dirname, '../'), { extensions: ['html'] }));
+
 // Admin Credentials
 const ADMIN_USER = {
     username: 'admin',
