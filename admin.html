@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         if (!localStorage.getItem('lsp_admin_token')) {
-            window.location.href = 'login.html';
+            window.location.href = 'login';
         }
     </script>
     <title>Admin Dashboard - LSP Universitas Mercu Buana</title>
@@ -80,12 +80,12 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
+            <a href="index" class="logo">
                 <div class="logo-icon">LSP</div>
                 <span>LSP UMB</span>
             </a>
             <ul class="nav-menu">
-                <li><a href="admin.html" class="nav-link active">Admin Dashboard</a></li>
+                <li><a href="admin" class="nav-link active">Admin Dashboard</a></li>
                 <li><a href="#" onclick="logoutAdmin(); return false;" class="nav-link"
                         style="color: #ff4d4d;">Logout</a></li>
             </ul>
@@ -211,7 +211,7 @@
             } catch (err) {
                 alert('Gagal menyimpan data: ' + err.message);
                 if (err.message.includes('auth') || err.message.includes('login')) {
-                    window.location.href = 'login.html';
+                    window.location.href = 'login';
                 }
             }
         });

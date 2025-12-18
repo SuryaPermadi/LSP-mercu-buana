@@ -103,7 +103,7 @@ async function loginAdmin(username, password) {
 
 function logoutAdmin() {
     localStorage.removeItem('lsp_admin_token');
-    window.location.href = 'login.html';
+    window.location.href = 'login';
 }
 
 function isLoggedIn() {
